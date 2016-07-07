@@ -30,15 +30,15 @@ class ViewController: UIViewController {
 //            }
 //        }
         
-        let query = PFQuery(className: "Products")
-        
-        query.getObjectInBackgroundWithId("yliBC0CDAI") { (object, error) in
-            if error != nil {
-                print(error)
-            } else {
-                print(object)
-            }
-        }
+//        let query = PFQuery(className: "Products")
+//        
+//        query.getObjectInBackgroundWithId("yliBC0CDAI") { (object, error) in
+//            if error != nil {
+//                print(error)
+//            } else {
+//                print(object)
+//            }
+//        }
     }
 
     override func didReceiveMemoryWarning() {
