@@ -16,17 +16,27 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let product = PFObject(className: "Products")
+//        let product = PFObject(className: "Products")
+//        
+//        product["name"] = "Ice Cream"
+//        product["description"] = "Tutti Fruiti"
+//        product["price"] = 4.99
+//        
+//        product.saveInBackgroundWithBlock { (success, error) in
+//            if success == true {
+//                print("Object saved with \(product.objectId)")
+//            } else {
+//                print("Failed")
+//            }
+//        }
         
-        product["name"] = "Ice Cream"
-        product["description"] = "Tutti Fruiti"
-        product["price"] = 4.99
+        let query = PFQuery(className: "Products")
         
-        product.saveInBackgroundWithBlock { (success, error) in
-            if success == true {
-                print("Object saved with ")
+        query.getObjectInBackgroundWithId("yliBC0CDAI") { (object, error) in
+            if error != nil {
+                print(error)
             } else {
-                print("Failed")
+                print(object)
             }
         }
     }
